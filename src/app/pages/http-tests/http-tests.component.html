@@ -1,0 +1,11 @@
+<div class="http-buttons">
+  <code *ngIf="errorMessage">{{ errorMessage }}</code>
+  <button (click)="getMethod()">GET</button>
+  <button (click)="postMethod()">POST</button>
+  <button (click)="putMethod()">PUT</button>
+  <button (click)="patchMethod()">PATCH</button>
+  <button (click)="deleteMethod()">DELETE</button>
+  <button (click)="errorHandling()">ERROR</button>
+  <button (click)="headers()">Headers</button>
+  <button (click)="params()">Params</button>
+</div>

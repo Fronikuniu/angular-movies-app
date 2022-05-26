@@ -1,0 +1,14 @@
+form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto 0;
+  gap: 20px;
+}
+select {
+  display: block;
+}
+label {
+  font-size: 1.3em;
+}

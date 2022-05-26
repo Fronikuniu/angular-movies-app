@@ -1,0 +1,76 @@
+<form (ngSubmit)="addMovie()">
+  <label for="title">
+    Title..
+    <input
+      type="text"
+      placeholder="Title.."
+      name="title"
+      id="title"
+      [(ngModel)]="model.title"
+    />
+  </label>
+
+  <label for="year">
+    Year..
+    <select id="year" name="year" [(ngModel)]="model.year">
+      <option *ngFor="let year of years | async" [value]="year">
+        {{ year }}
+      </option>
+    </select>
+  </label>
+
+  <label for="category">
+    Category..
+    <select id="category" name="category" [(ngModel)]="model.category">
+      <option *ngFor="let category of categories | async" [value]="category">
+        {{ category }}
+      </option>
+    </select>
+  </label>
+
+  <label for="director">
+    Director..
+    <input
+      type="text"
+      placeholder="Director.."
+      name="director"
+      id="director"
+      [(ngModel)]="model.director"
+    />
+  </label>
+
+  <label for="plot">
+    Plot..
+    <input
+      type="text"
+      placeholder="plot.."
+      name="plot"
+      id="plot"
+      [(ngModel)]="model.plot"
+    />
+  </label>
+
+  <label for="country">
+    Country..
+    <input
+      type="text"
+      placeholder="Country.."
+      name="country"
+      id="country"
+      [(ngModel)]="model.country"
+    />
+  </label>
+
+  <label for="imdbRating">
+    IMDB Rating..
+    <input
+      type="text"
+      placeholder="imdbRating.."
+      name="imdbRating"
+      id="imdbRating"
+      [(ngModel)]="model.imdbRating"
+    />
+  </label>
+
+  <input class="btn" type="submit" value="Add new movie" />
+</form>
